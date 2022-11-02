@@ -1,0 +1,29 @@
+---
+import NavBar from '../components/NavBar/NavBar.jsx'
+import Banner from '../components/Banner/index.astro'
+import About from '../components/About/index.astro'
+import Experience from '../components/Experience/index.astro'
+import Technologies from '../components/Technologies/index.astro'
+import Projects from '../components/Projects/index.astro'
+import Contact from '../components/Contact/index.astro'
+import '../styles/app.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<NavBar />
+		<Banner />
+		<About />
+		<Experience />
+		<Technologies />
+		<Projects />
+		<Contact />
+	</body>
+</html>
