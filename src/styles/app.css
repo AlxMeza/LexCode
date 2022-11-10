@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Marvel:wght@400;700&family=VT323&display=swap');
+
+
 .link-nav {
+  font-size: 1.1rem;
+  font-weight: 500;
   background-image: linear-gradient(
     to right,
     #50fa7b,
@@ -12,6 +17,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+  font-family: 'Fira Code', monospace;
 }
 
 .link-nav:before {
@@ -32,4 +38,29 @@
 
 .link-nav:hover::before {
   width:110%;
+}
+
+.active-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  color: #bd93f9;
+  font-family: 'Fira Code', monospace;
+}
+
+#message {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+}
+
+.banner {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+}
+
+.simple-text {
+  font-family: 'Fira Code', monospace;
 }
