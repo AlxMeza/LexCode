@@ -1,24 +1,39 @@
 <div>
   <section class="bg-[url('/bg1.svg')] bg-cover h-screen w-full grid lg:grid-cols-2 gap-4" id='Home'>
     <div class="text-center my-auto justify-center lg:pl-20 md:pl-10">
-      <h1 class="text-8xl text-[#bd93f9] banner">Hello World!!!</h1>
-      <p class="text-6xl mt-4 text-[#50fa7b]" id="message"></p>
+      <h1 class="lg:text-8xl md:text-8xl max-sm:text-6xl text-[#bd93f9] banner">Hello World!!!</h1>
+      <p class="lg:text-6xl md:text-6xl max-sm:text-4xl mt-4 text-[#50fa7b]" id="message"></p>
     </div>
     <div>
-      <a href="https://www.instagram.com/lex.dev_code/" target="_blank" class="hover:opacity-90">
-        <img class="bg-contain lg:w-9/12 md:w-4/6 sm:w-3/5 h-full mx-auto lg:pl-20 md:pl-10" src="/avatar.svg" alt="avatar">
+      <a href="https://www.instagram.com/lex.dev_code/" target="_blank">
+        <img id='img-avatar' class="bg-contain lg:w-9/12 md:w-4/6 max-sm:w-4/5 h-full mx-auto lg:pl-20 md:pl-10" src="/avatar.svg" alt="avatar">
       </a>
     </div>
   </section>
 </div>
 
+
 <script>
   import Typewriter from 'typewriter-effect/dist/core'
+  import VanillaTilt from 'vanilla-tilt'
 
   new Typewriter('#message', {
   strings: ["I'm Alex Meza", "I'm Lex Code", "I'm a Coder", "I Love Web Develop", "I Love Create New Things"],
   autoStart: true,
   loop: true,
   delay: 80,
+  })
+
+  const element = document.getElementById("img-avatar")
+  VanillaTilt.init(element, {
+    max: 45,
+		speed: 250,
+    gyroscope: true,
+    gyroscopeMinAngleX: -45,    
+    gyroscopeMaxAngleX: 45,   
+    gyroscopeMinAngleY: -45,   
+    gyroscopeMaxAngleY: 45,     
+    gyroscopeSamples: 10     
+    
   })
 </script>
