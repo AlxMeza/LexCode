@@ -1,12 +1,12 @@
 <div>
-  <section class="bg-[url('/bg1.svg')] bg-cover h-screen w-full grid lg:grid-cols-2 gap-4" id='Home'>
-    <div class="text-center my-auto justify-center lg:pl-20 md:pl-10">
-      <h1 class="lg:text-8xl md:text-8xl max-sm:text-6xl text-[#bd93f9] banner">Hello World!!!</h1>
-      <p class="lg:text-6xl md:text-6xl max-sm:text-4xl mt-4 text-[#50fa7b]" id="message"></p>
+  <section class="bg-[url('/bg1.svg')] bg-cover bg-center h-screen w-full grid lg:grid-cols-2 grid-cols-1 gap-4 content-center" id='Home'>
+    <div class="text-center my-auto justify-center">
+      <h1 class="lg:text-8xl md:text-8xl sm:text-6xl text-6xl text-[#bd93f9] banner">Hello World!!!</h1>
+      <p class="lg:text-6xl md:text-6xl sm:text-4xl text-4xl mt-4 text-[#50fa7b]" id="message"></p>
     </div>
     <div>
       <a href="https://www.instagram.com/lex.dev_code/" target="_blank">
-        <img id='img-avatar' class="bg-contain lg:w-9/12 md:w-4/6 max-sm:w-4/5 h-full mx-auto lg:pl-20 md:pl-10" src="/avatar.svg" alt="avatar">
+        <img id='img-avatar' class="bg-contain lg:w-9/12 md:w-4/6 sm:w-4/5 w-4/5 h-full mx-auto glitch2" src="/avatar.svg" alt="avatar">
       </a>
     </div>
   </section>
@@ -18,7 +18,7 @@
   import VanillaTilt from 'vanilla-tilt'
 
   new Typewriter('#message', {
-  strings: ["I'm Alex Meza", "I'm Lex Code", "I'm a Coder", "I Love Web Develop", "I Love Create New Things"],
+  strings: ["I'm Alex Meza", "I'm Lex Code", "I'm a Programmer", "I Love Web Develop", "I Love Create New Things"],
   autoStart: true,
   loop: true,
   delay: 80,

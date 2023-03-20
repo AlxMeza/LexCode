@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Marvel:wght@400;700&family=VT323&display=swap');
 
+:root {
+  --primary-bg-color: #282a36;
+  --secondary-bg-color: #44475a;
+  --foreground: #f8f8f2;
+  --coment: #6272a4;
+  --primary-text: #50fa7b;
+  --seconday-text: #bd93f9;
+  --primary-info: #8be9fd;
+  --secondary-info: #ff79c6;
+  --primary-aux: #ffb86c;
+  --danger-color: #ff5555;
+  --warn-color: #f1fa8c;
+
+}
 
 .link-nav {
   font-size: 1.1rem;
