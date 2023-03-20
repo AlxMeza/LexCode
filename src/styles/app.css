@@ -78,3 +78,44 @@
 .simple-text {
   font-family: 'Fira Code', monospace;
 }
+
+/*Tooltip*/
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 10;
+  width: 2rem;
+  color: white;
+  font-size: 12px;
+  background-color: #192733;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: #192733;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.hover-content:hover .tooltip-text {
+  visibility: visible;
+}
+
+#top {
+  top: -40px;
+  left: -50%;
+}
+
+#top::before {
+  top: 80%;
+  left: 45%;
+}
+
+.hover-content {
+  position: relative;
+  display: block;
+}
