@@ -3,8 +3,8 @@ import {useState} from 'react'
 export default function NavBar () {
   const [openNavbar, setOpenNavbar] = useState(false)
   const [btnStates, setBtnStates] = useState({home: 1, about: 0, exp: 0, tech: 0, project: 0, contact: 0})
-  const [styles] = useState(['block py-2 pr-4 pl-3 rounded md:border-0 md:p-0 link-nav',
-    'block py-2 pr-4 pl-3 text-white rounded md:p-0 underline underline-offset-8 decoration-2 active-link'
+  const [styles] = useState(['block py-2 pr-4 pl-3 rounded md:border-0 md:p-0 link-nav simple-text',
+    'block py-2 pr-4 pl-3 text-white rounded md:p-0 underline underline-offset-8 decoration-2 active-link simple-text'
   ])
   
   return (
@@ -22,22 +22,40 @@ export default function NavBar () {
             <div className={openNavbar ? "flex w-full md:block md:w-auto" : "hidden w-full md:block md:w-auto"} >
               <ul className="flex flex-col p-4 mt-4 bg-gray-[#44475a] rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-[#282a36] md:dark:bg-[#282a36] dark:border-[#282a36]">
                 <li>
-                  <a href="#Home" name='home' className={styles[btnStates.home]} onClick={() => setBtnStates({home: 1, about: 0, exp: 0, tech: 0, project: 0, contact: 0})}>Home</a>
+                  <a href="#Home" name='home' className={styles[btnStates.home]} onClick={() => {
+                    setBtnStates({home: 1, about: 0, exp: 0, tech: 0, project: 0, contact: 0})
+                    setOpenNavbar(false)
+                  }}>Home</a>
                 </li>
                 <li>
-                  <a href="#About" name='about' className={styles[btnStates.about]} onClick={() => setBtnStates({home: 0, about: 1, exp: 0, tech: 0, project: 0, contact: 0})}>About Me</a>
+                  <a href="#About" name='about' className={styles[btnStates.about]} onClick={() => {
+                    setBtnStates({home: 0, about: 1, exp: 0, tech: 0, project: 0, contact: 0})
+                    setOpenNavbar(false)
+                  }}>About Me</a>
                 </li>
                 <li>
-                  <a href="#Experience" name='exp' className={styles[btnStates.exp]} onClick={() => setBtnStates({home: 0, about: 0, exp: 1, tech: 0, project: 0, contact: 0})}>Experience</a>
+                  <a href="#Experience" name='exp' className={styles[btnStates.exp]} onClick={() => {
+                    setBtnStates({home: 0, about: 0, exp: 1, tech: 0, project: 0, contact: 0})
+                    setOpenNavbar(false)
+                  }}>Experience</a>
                 </li>
                 <li>
-                  <a href="#Technologies" name='tech' className={styles[btnStates.tech]} onClick={() => setBtnStates({home: 0, about: 0, exp: 0, tech: 1, project: 0, contact: 0})}>Technologies</a>
+                  <a href="#Technologies" name='tech' className={styles[btnStates.tech]} onClick={() => {
+                    setBtnStates({home: 0, about: 0, exp: 0, tech: 1, project: 0, contact: 0})
+                    setOpenNavbar(false)
+                  }}>Technologies</a>
                 </li>
                 <li>
-                  <a href="#Projects" name='project' className={styles[btnStates.project]} onClick={() => setBtnStates({home: 0, about: 0, exp: 0, tech: 0, project: 1, contact: 0})}>Projects</a>
+                  <a href="#Projects" name='project' className={styles[btnStates.project]} onClick={() => {
+                    setBtnStates({home: 0, about: 0, exp: 0, tech: 0, project: 1, contact: 0})
+                    setOpenNavbar(false)
+                  }}>Projects</a>
                 </li>
                 <li>
-                  <a href="#Contact" name='contact' className={styles[btnStates.contact]} onClick={() => setBtnStates({home: 0, about: 0, exp: 0, tech: 0, project: 0, contact: 1})}>Contact</a>
+                  <a href="#Contact" name='contact' className={styles[btnStates.contact]} onClick={() => {
+                    setBtnStates({home: 0, about: 0, exp: 0, tech: 0, project: 0, contact: 1})
+                    setOpenNavbar(false)
+                  }}>Contact</a>
                 </li>
               </ul>
             </div>

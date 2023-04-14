@@ -1,5 +1,11 @@
-<div>
-  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full" id='Projects'>
+---
+import Card from '../Card/index.astro'
+---
 
+<div>
+  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full grid content-center justify-center" id='Projects'>
+    <Card title='giffy' deployUrl='https://giffy-one-xi.vercel.app/' gitUrl='https://github.com/AlxMeza/giffy' images={['giffy1.png', 'giffy1.png']}>
+      <p class="simple-text">A modern gif searcher</p>
+    </Card>
   </section>
 </div>
