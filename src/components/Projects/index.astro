@@ -3,9 +3,13 @@ import Card from '../Card/index.astro'
 ---
 
 <div>
-  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full grid content-center justify-center" id='Projects'>
-    <Card title='giffy' deployUrl='https://giffy-one-xi.vercel.app/' gitUrl='https://github.com/AlxMeza/giffy' images={['giffy1.png', 'giffy1.png']}>
-      <p class="simple-text">A modern gif searcher</p>
+  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full grid content-center justify-center px-5 gap-2 py-5" id='Projects'>
+    <Card title='giffy' deployUrl='https://giffy-one-xi.vercel.app/' gitUrl='https://github.com/AlxMeza/giffy' images={['giffy1.png', 'giffy2.png']}>
+      <p class="simple-text md:mx-5 mx-2 my-4">A Modern Search for Gifs with infinity scroll</p>
+    </Card>
+
+    <Card title='ToDoList' deployUrl='' gitUrl='https://github.com/AlxMeza/ToDoList' images={['todolist1.png', 'todolist2.png']}>
+      <p class="simple-text md:mx-5 mx-2 my-4">An application to generate a task list, with user roles, you can create personal tasks or assign tasks, you can also share activities with other users for collaborative work.</p>
     </Card>
   </section>
 </div>
