@@ -3,13 +3,24 @@ import Card from '../Card/index.astro'
 ---
 
 <div>
-  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full grid content-center justify-center px-5 gap-2 py-5" id='Projects'>
-    <Card title='giffy' deployUrl='https://giffy-one-xi.vercel.app/' gitUrl='https://github.com/AlxMeza/giffy' images={['giffy1.png', 'giffy2.png']}>
-      <p class="simple-text md:mx-5 mx-2 my-4">A Modern Search for Gifs with infinity scroll</p>
-    </Card>
-
-    <Card title='ToDoList' deployUrl='' gitUrl='https://github.com/AlxMeza/ToDoList' images={['todolist1.png', 'todolist2.png']}>
-      <p class="simple-text md:mx-5 mx-2 my-4">An application to generate a task list, with user roles, you can create personal tasks or assign tasks, you can also share activities with other users for collaborative work.</p>
-    </Card>
+  <section class="bg-[url('/bg1.svg')] bg-cover min-h-screen w-full content-center justify-center px-5 py-5 grid" id='Projects'>
+    <h1 class="banner mx-auto text-[#f8f8f2] text-center lg:text-6xl md:text-6xl sm:text-4xl text-4xl my-10">Projects</h1>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+      <Card title='giffy' deployUrl='https://giffy-one-xi.vercel.app/' gitUrl='https://github.com/AlxMeza/giffy' images={['giffy1.png', 'giffy2.png']}>
+        <p class="simple-text md:mx-5 mx-2 my-4">A Modern Search for Gifs with infinity scroll</p>
+      </Card>
+  
+      <Card title='ToDoList' deployUrl='' gitUrl='https://github.com/AlxMeza/ToDoList' images={['todolist1.png', 'todolist2.png']}>
+        <p class="simple-text md:mx-5 mx-2 my-4">An application to generate a task list, with user roles, you can create personal tasks or assign tasks, you can also share activities with other users for collaborative work.</p>
+      </Card>
+  
+      <Card title='ShipTacToe' deployUrl='https://shiptactoe.alexmeza24421.repl.co/' gitUrl='https://github.com/AlxMeza/tictactoe' images={['shiptactoe.png']}>
+        <p class="simple-text md:mx-5 mx-2 my-4">The classic game TicTacToe with Drag and Drop Functionallity and SpaceCraft Thematic.</p>
+      </Card>
+      
+      <Card title='Prehispanic Memory' deployUrl='https://prehispanic-memory.alexmeza24421.repl.co/' gitUrl='https://github.com/AlxMeza/memorama' images={['memorama.png']}>
+        <p class="simple-text md:mx-5 mx-2 my-4">A memory game with prehispanic theme.</p>
+      </Card>   
+    </div>
   </section>
 </div>
