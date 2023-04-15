@@ -3,10 +3,11 @@ const {title, deployUrl, gitUrl, images} = Astro.props
 import Slider from "../Slider";
 ---
 
-<div class='border border-[#282a36] px-10 py-10 bg-[#282a36] text-[#50fa7b] rounded-lg w-full'>
+<div class='border border-[#282a36] px-10 py-10 bg-[#282a36] text-[#50fa7b] rounded-lg w-full grid'>
     { images.length > 1 ? <Slider images={images} title={title} client:load/> : <img class='w-fit inline-block object-cover h-[18rem]' src={images[0]} alt={title} /> }
-    <section class="flex justify-between my-4 md:mx-5 mx-2">
-        <h2 class="simple-text text-center font-semibold text-lg text-[#bd93f9]">{title.toUpperCase()}</h2>
+    
+    <section class="flex justify-between my-5">
+        <h2 class="simple-text text-center font-semibold text-xl text-[#bd93f9]">{title.toUpperCase()}</h2>
 
         {
             deployUrl !== '' ? 
