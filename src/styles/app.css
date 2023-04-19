@@ -125,7 +125,6 @@
 .glitch-btn,.glitch-btn::after {
   font-family: 'Fira Code', monospace;
   font-weight: 500;
-  padding: 1rem 5rem;
   font-size: 1.5rem;
   border: 0.2rem solid #50fa7b;
   border-radius: 0.5rem;
@@ -144,7 +143,7 @@
   clip-path: var(--move1);
   content: 'Download';
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -226,4 +225,67 @@
     clip-path: var(--move1);
     transform: translate(0);
   }
+}
+
+
+/* Email button */
+.btn-mail {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  background: #50fa7b;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.2s;
+  color: #282a36;
+}
+
+.btn-mail span {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-mail svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-mail:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn-mail:hover svg {
+  transform: translateX(5.2rem) rotate(45deg) scale(1.1);
+}
+
+.btn-mail:hover span {
+  transform: translateX(12rem);
+}
+
+.btn-mail:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
+/* Social links */
+.btn-social:hover span {
+  color: #44475a;
+}
+
+.btn-social:hover svg {
+  fill: #44475a;
 }
