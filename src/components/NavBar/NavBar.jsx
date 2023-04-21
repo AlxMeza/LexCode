@@ -6,7 +6,7 @@ export default function NavBar () {
   const [styles] = useState(['block py-2 pr-4 pl-3 rounded md:border-0 md:p-0 link-nav simple-text',
     'block py-2 pr-4 pl-3 text-white rounded md:p-0 underline underline-offset-8 decoration-2 active-link simple-text'
   ])
-  
+
   return (
     <>
       <div className="sticky top-0 border-b-2 border-[#bd93f9] z-10">
@@ -59,6 +59,8 @@ export default function NavBar () {
                 </li>
               </ul>
             </div>
+
+            <button className='simple-text text-[#f8f8f2] hover:text-[#50fa7b] text-[1.1rem] ml-4' onClick={() => location.href = './es'}>ES</button>
           </div>
         </nav>
       </div>

@@ -1,0 +1,49 @@
+<div>
+    <section class="bg-[url('/bg1-1.svg')] bg-cover bg-center min-h-screen w-full grid lg:grid-cols-2 grid-cols-1 gap-4 content-center" id='Home'>
+      <div class="text-center my-auto justify-center">
+        <h1 class="lg:text-8xl md:text-8xl sm:text-6xl text-6xl text-[#bd93f9] banner">Hello World!!!</h1>
+        <p class="lg:text-6xl md:text-6xl sm:text-4xl text-4xl mt-4 text-[#50fa7b]" id="message"></p>
+  
+        <aside class="w-full mt-20 mb-10">
+          <a class="glitch-btn md:px-20 md:py-[1rem] px-5 py-2" href="cv_alex_meza_es.pdf" target="_blank">Curriculum 👾</a>
+        </aside>
+      </div>
+      
+      <div>
+        <a href="https://www.instagram.com/lex.dev_code/" target="_blank">
+          <img id='img-avatar' class="bg-contain lg:w-9/12 md:w-4/6 sm:w-4/5 w-4/5 h-full mx-auto glitch2 rounded-full" src="/avatar.svg" alt="avatar">
+        </a>
+      </div>
+      <!-- <div>
+        <a href="https://www.instagram.com/lex.dev_code/" target="_blank">
+          <img id='img-avatar' class="bg-contain lg:w-9/12 md:w-4/6 sm:w-4/5 w-4/5 h-full mx-auto glitch2 rounded-full" src="/CyberAlx.jpeg" alt="avatar">
+        </a>
+      </div> -->
+    </section>
+  </div>
+  
+  
+  <script>
+    import Typewriter from 'typewriter-effect/dist/core'
+    import VanillaTilt from 'vanilla-tilt'
+  
+    new Typewriter('#message', {
+    strings: ["Soy Alex Meza", "Soy LexCode", "Soy Desarrollador", "Me encanta el desarrollo web", "Adoro crear cosas nuevas"],
+    autoStart: true,
+    loop: true,
+    delay: 80,
+    })
+  
+    const element = document.getElementById("img-avatar")
+    VanillaTilt.init(element, {
+      max: 30,
+          speed: 20,
+      gyroscope: true,
+      gyroscopeMinAngleX: -45,    
+      gyroscopeMaxAngleX: 45,   
+      gyroscopeMinAngleY: -45,   
+      gyroscopeMaxAngleY: 45,     
+      gyroscopeSamples: 10     
+      
+    })
+  </script>

@@ -1,0 +1,44 @@
+---
+import NavBar from '../../components/NavBarEs/index'
+import Banner from '../../components/Banner/banner.astro'
+import About from '../../components/About/about.astro'
+import Experience from '../../components/Experience/experience.astro'
+import Tech from '../../components/Tech/technologies.astro'
+import Projects from '../../components/Projects/projects.astro'
+import Contact from '../../components/Contact/contact.astro'
+import '../../styles/app.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/icon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>LexCode</title>
+	</head>
+	<body>
+		<NavBar client:load/>
+		<Banner />
+		<About />
+		<Experience />
+		<Tech />
+		<Projects />
+		<Contact />
+	</body>
+
+	<script>
+		import { PowerGlitch } from 'powerglitch'
+		PowerGlitch.glitch('.glitch', {
+        	playMode: 'hover',
+        	hideOverflow: true, 
+			timing: {
+            duration: 1000,
+            iterations: Infinity,
+            easing: 'ease-in-out',
+        },})
+		PowerGlitch.glitch('.glitch2', {
+        	playMode: 'always',
+        	hideOverflow: true })
+	</script>
+</html>
